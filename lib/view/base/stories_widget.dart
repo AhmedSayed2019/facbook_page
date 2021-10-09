@@ -1,38 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task/data/model/response/story_model.dart';
-import 'package:task/utility/dimensions.dart';
+import 'package:task/data/model/response/home_model.dart';
 
-class StoriesWidgeta extends StatelessWidget {
-  List<StoryModel> storyList = [];
-
-  StoriesWidgeta({required this.storyList});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 220.0,
-      padding: EdgeInsets.symmetric(vertical: 15.0),
-      child: ListView.builder(
-        itemCount: storyList.length,
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {
-          return Container(
-            margin: EdgeInsets.symmetric(
-                horizontal: Dimensions.PADDING_SIZE_EXTRA_SMALL),
-            width: 120.0,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                image: DecorationImage(
-                    image: NetworkImage(index == 0
-                        ? "https://qph.fs.quoracdn.net/main-qimg-11ef692748351829b4629683eff21100.webp"
-                        : storyList[index].storyImage),
-                    fit: BoxFit.cover)),
-          );
-        },
-      ),
-    );
-  }
-}
 
 class StoriesWidget extends StatelessWidget {
   List<StoryModel> storyList = [];

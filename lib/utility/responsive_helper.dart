@@ -11,8 +11,21 @@ class ResponsiveHelper {
     }
   }
 
-  static bool isWeb() {
-    return kIsWeb;
+//   static bool isWeb() {
+//     return kIsWeb;
+//
+// }
+
+  static bool isWeb(context) {
+    final size = MediaQuery
+        .of(context)
+        .size
+        .width;
+    if (size > 1400 ) {
+      return true;
+    } else {
+      return false;
+    }
   }
   static bool isMobile(context) {
     final size = MediaQuery.of(context).size.width;

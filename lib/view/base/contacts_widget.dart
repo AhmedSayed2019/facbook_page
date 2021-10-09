@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:task/data/model/response/user_model.dart';
-import 'package:task/utility/color_resources.dart';
+import 'package:task/data/model/response/home_model.dart';
 import 'package:task/utility/dimensions.dart';
 
-import 'AppBarButton.dart';
 import 'avatar_image.dart';
 
 class ContactWidget extends StatelessWidget {
@@ -61,8 +59,6 @@ class ContactWidget extends StatelessWidget {
                         AvatarImage(contactList[index].image , contactList[index].isConnected),
 
                         Container( alignment:Alignment.centerLeft,child: Text(contactList[index].userName , style: Theme.of(context).textTheme.headline3!.copyWith(fontSize: 16))),
-
-
                       ],
                     ),
                   ),
