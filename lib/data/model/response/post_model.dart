@@ -1,31 +1,3 @@
-import 'package:task/utility/device_screen_type.dart';
-
-class Post{
-  final String profileImageUrl;
-  final String username;
-  final String time;
-  final String content;
-  final String likes;
-  final String comments;
-  final String shares;
-  final PostType type;
-  final List<String> images;
-
-  Post({
-    required this.profileImageUrl,
-   required this.username,
-   required this.time,
-   required this.content,
-   required this.likes,
-   required this.comments,
-   required this.shares,
-   required this.type,
-   required this.images
-  });
-
-
-}
-
 
 
 // List<Post> posts = [

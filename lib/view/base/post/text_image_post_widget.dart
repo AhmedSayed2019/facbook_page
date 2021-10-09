@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:task/data/model/response/post_model.dart';
+import 'package:task/data/model/response/home_model.dart';
 import 'package:task/utility/color_resources.dart';
 import 'package:task/utility/images.dart';
 
 import '../avatar_image.dart';
 import '../custom_text_field.dart';
+import 'ipost.dart';
 
-class TextImagePostWidget extends StatelessWidget {
 
-  final Post post;
 
-  TextImagePostWidget({
-    required this.post
-  });
 
+
+
+class TextImagePostWidget extends IPost {
   @override
-  Widget build(BuildContext context) {
+  Widget buildPost(BuildContext context, PostModel post) {
+
     return Container(
       padding: const EdgeInsets.all(15.0),
       child: Column(
@@ -24,7 +24,7 @@ class TextImagePostWidget extends StatelessWidget {
           Row(
             children: <Widget>[
               CircleAvatar(
-                backgroundImage: AssetImage(post.profileImageUrl),
+                backgroundImage: AssetImage(post.profileImageUrl!),
                 radius: 20.0,
               ),
               const SizedBox(width: 7.0),
@@ -32,11 +32,11 @@ class TextImagePostWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(post.username, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17.0)),
+                  Text(post.username!, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17.0)),
                   const SizedBox(height: 5.0),
                   Row(
                     children: [
-                      Text(post.time),
+                      Text(post.time!),
                       Icon(
                         Icons.public,
                         color: ColorResources.colorGrayLite,
@@ -50,8 +50,8 @@ class TextImagePostWidget extends StatelessWidget {
           ),
 
           const SizedBox(height: 20.0),
-          Text(post.content, style: const TextStyle(fontSize: 15.0)),
-          Image.network(post.images[0]),
+          Text(post.content!, style: const TextStyle(fontSize: 15.0)),
+          Image.network(post.images![0]),
 
           const SizedBox(height: 10.0),
 
@@ -123,4 +123,5 @@ class TextImagePostWidget extends StatelessWidget {
       ),
     );
   }
+
 }

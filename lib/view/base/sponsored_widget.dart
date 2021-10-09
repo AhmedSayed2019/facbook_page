@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task/data/model/response/sponsor_model.dart';
+import 'package:task/data/model/response/home_model.dart';
 import 'package:task/utility/dimensions.dart';
 
 
