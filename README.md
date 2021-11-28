@@ -10,11 +10,19 @@ Simple steps you **should follow whenever** you developing  the Mobile App
 ## Screenshots
 
 
-## Screenshots
 
-Upcomming Launchs               |  Past Launch                | Launch Detail         
-:-------------------------:|:-------------------------:|:-------------------------:
-|![](asset/screan_web.jfif?raw=true)|![](screen_shots/past_launch.png?raw=true)|![](screen_shots/launch_details.png?raw=true)|
+Mobile|![](assets/screan_mobile.jfif?raw=true)
+:-------------------------:|:-------------------------:
+
+
+
+Tablet|![](assets/screan_tablet.jfif?raw=true)
+:-------------------------:|:-------------------------:
+
+
+
+Web|![](assets/screan_web.jfif?raw=true)
+:-------------------------:|:-------------------------:
 
 
 ## Install
